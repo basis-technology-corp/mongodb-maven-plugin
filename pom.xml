@@ -19,12 +19,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
-
   <groupId>com.github.stephenc.mongodb</groupId>
   <artifactId>mongodb-maven-plugin</artifactId>
   <version>2.2.1-1-basis-SNAPSHOT</version>
@@ -56,15 +50,28 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/stephenc/mongodb-maven-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:stephenc/mongodb-maven-plugin.git</developerConnection>
-    <url>http://github.com/stephenc/mongodb-maven-plugin/tree/master/</url>
+    <connection>scm:git:git@github.com:basis-technology-corp/mongodb-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:basis-technology-corp/mongodb-maven-plugin.git</developerConnection>
+    <url>http://github.com/basis-technology-corp/mongodb-maven-plugin/tree/master/</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>github</system>
-    <url>http://github.com/stephenc/mongodb-maven-plugin/issues</url>
+    <url>http://github.com/basis-technology-corp/mongodb-maven-plugin/issues</url>
   </issueManagement>
+  <distributionManagement>
+    <repository>
+      <id>basistech.repo</id>
+      <name>Basis Local Repository</name>
+      <url>http://maven.basistech.net/nexus/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>basistech.snapshot.repo</id>
+      <name>Basistech Local Snapshot Repository</name>
+      <url>http://maven.basistech.net/nexus/content/repositories/snapshots/</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+  </distributionManagement>
 
   <properties>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
